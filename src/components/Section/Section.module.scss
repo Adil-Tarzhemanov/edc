@@ -1,0 +1,46 @@
+.section {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: -45px;
+        left: -30px;
+    }
+
+    & .lineSection {
+        width: 76.19px;
+        height: 0px;
+        margin-right: 42.86px;
+        background: rgba(3, 189, 250, 1);
+        border: 2px solid #03BDFA;
+        z-index: 1;
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+}
+
+.sectionAppearance{
+    animation: section-appearance;
+    animation-duration: 1s;
+}
+
+
+@keyframes section-appearance {
+    0%{
+        left: -200px;
+        opacity: 0;
+    }
+    100%{
+        left: 0px;
+        opacity: 1;
+    }
+}

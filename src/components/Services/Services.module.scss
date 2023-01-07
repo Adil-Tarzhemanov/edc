@@ -1,0 +1,214 @@
+.container {
+    width: 100%;
+    min-height: 900px;
+    background: #111111;
+    // margin-top: 80px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    & .sectionAndEarth {
+        display: flex;
+        align-items: center;
+    }
+
+    & .appearanceLeft {
+        animation-name: appearanceLeft;
+        animation-duration: 1.2s;
+    }
+    
+
+    & .h2 {
+        position: relative;
+        margin-top: 30px;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100%;
+        color: #FFFFFF;
+    }
+
+    & .headText {
+        position: relative;
+        max-width: 660px;
+        min-height: 95px;
+        margin-top: 30px;
+        font-family: 'Gilroy';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+    }
+
+    & .services {
+        display: flex;
+        gap: 19px;
+        flex-wrap: wrap;
+        justify-content: center;
+        // max-width: 100%;
+        padding-bottom: 106px;
+
+        & .serviceWrapper {
+            padding-top: 48px;
+            margin-top: 33px;
+            position: relative;
+
+            img {
+                width: 96.24px;
+                height: 95.24px;
+                position: absolute;
+                z-index: 1;
+                top: 0px;
+                left: 95px;
+            }
+
+            & .service {
+                position: relative;
+                width: 285.71px;
+                height: 342.86px;
+                background: #16163C;
+                border-radius: 35px;
+
+                &:before {
+                    content:'';
+                    position: absolute;
+                    width: 285.71px;
+                    height: 342.86px;
+                    background: linear-gradient(216.2deg, #7237BD 0%, #03BDFA 100%);
+                    border-radius: 35px;
+                    opacity: 0;
+                }
+              
+                &:hover::before {
+                    transition: 0.5s;
+                    opacity: 1;
+                }
+
+                h3 {
+                    position: absolute;
+                    padding-top: 71.43px;
+                    padding-left: 39.05px;
+                    text-align: center;
+                    width: 218.57px;
+                    height: 83.81px;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 120%;
+                    letter-spacing: 0.03em;
+                    color: #FFFFFF;
+                    z-index: 1;
+                }
+
+                & .design {
+                    padding-top: 81px;
+                }
+
+                p {
+                    position: absolute;
+                    top: 150px;
+                    left: 23px;
+                    width: 234.29px;
+                    height: 153.33px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    text-align: center;
+                    letter-spacing: 0.03em;
+                    color: #FFFFFF;
+                    z-index: 1;
+                }
+            }
+
+            & .first {
+                animation: moveService 1s;
+            }
+
+            & .second {
+                animation: antiMoveService 1s;
+            }
+        }
+    }
+
+    @media (max-width: 1280px) {
+        max-width: 900px;
+        align-items: center;
+
+        & .sectionAndEarth {
+            width: 660px;
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 920px) {
+        max-width: 920px;
+
+        & .services {
+            margin: 0 auto;
+            max-width: 700px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 720px) {
+        max-width: 720px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        & .sectionAndEarth {
+            max-width: 100%;
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 520px) {
+        & .headText {
+            max-width: 470px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        & .h2 {
+            font-size: 48px;
+        }
+    }
+}
+
+@keyframes appearanceLeft {
+    0%{
+        left: -200px;
+        opacity: 0;;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes moveService {
+    0%{
+        opacity: 0;
+        top: -100px
+    }
+    100%{
+        opacity: 1;
+        top: 0px
+    }
+}
+
+@keyframes antiMoveService {
+    0%{
+        opacity: 0;
+        top: 100px;
+    }
+    100%{
+        opacity: 1;
+        top: 0px
+    }
+}

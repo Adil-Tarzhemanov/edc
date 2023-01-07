@@ -1,0 +1,109 @@
+.modal {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    & .content {
+        width: 100%;
+        max-width: 400px;
+        min-height: 581px;
+        flex-direction: column;
+        background: rgba(25, 28, 38, 1);
+        border-radius: 15px;
+
+        & .closeModal {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 10px;
+            padding-top: 10px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 21px;
+            color: white;
+            font-weight: 700;
+            font-size: 32px;
+        }
+
+        & .basicWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                color: white;
+                width: 286px;
+                margin-top: 40px;
+                display: block;
+                background: none;
+                border: none;
+                border-bottom: 1px solid white;
+                outline: none;
+            }
+    
+            textarea {
+                color: white;
+                width: 286px;
+                height: 109px;
+                margin-top: 40px;
+                background: none;
+                border: 1px solid white;
+                outline: none;
+                resize: none;
+            }
+    
+            & .send {
+                width: 190.48px;
+                height: 52.38px;
+                color: white;
+                background: linear-gradient(270deg, #7237BD 0%, #03BDFA 100%);
+                border-radius: 27.5px;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+    
+            & .imgWrapper {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                margin-top: 25px;
+    
+                & .socialMedia {
+                    border-radius: 50%;
+                    padding: 5px;    
+                    width: 40px;
+                    height: 40px;
+                    color: white;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+
+                    &:hover {
+                        box-shadow:
+                            inset 0 0 10px whitesmoke,
+                            inset 20px 0 20px #f0f,
+                            inset -20px 0 20px #0ff,
+                            inset 20px 0 50px #f0f,
+                            inset -20px 0 50px #0ff,
+                            0 0 10px #fff,
+                            -10px 0 20px #f0f,
+                            10px 0 20px #0ff;
+                    }
+                }
+            }
+        }
+    } 
+}

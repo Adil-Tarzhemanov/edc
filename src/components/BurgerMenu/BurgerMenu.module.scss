@@ -1,0 +1,49 @@
+.mobileHeader {
+
+    nav {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+        background: rgba(17, 17, 17, 0.8);
+        border-bottom: 1px solid white;
+        position: fixed;
+        z-index: 50;
+        backdrop-filter: blur(2px);
+
+        & .burgerBtn {
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+            position: relative;
+            background: rgba(17, 17, 17, 0.95);
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 30px;
+                background: white;
+                height: 2px;
+            }
+
+            & span {
+                position: absolute;
+                top: 14px;
+                width: 30px;
+                background: white;
+                height: 2px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;    
+                width: 30px;
+                background: white;
+                height: 2px;
+            }
+        }
+    }
+}

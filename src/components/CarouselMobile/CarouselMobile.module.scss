@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    align-items: center;
+
+    img {
+        cursor: pointer;
+    }
+}
+
+.wrapper {
+    height: 516px;
+    width: 238px;
+
+    & .window {
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        border-radius: 30px;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        & .allProjects {
+            display: flex;   
+            height: 100%;
+            transition-duration: 1s;
+
+            div {
+                flex-shrink: 0;
+                width: 100%;
+            }
+        }
+    }
+}

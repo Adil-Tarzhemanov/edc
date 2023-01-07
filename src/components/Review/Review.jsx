@@ -1,0 +1,23 @@
+import styles from './Review.module.scss';
+
+export const Review = ({ name, title, review, img }) => {
+    return (
+        <div className={styles.review}>
+            <div className={styles.clientWrapper}>
+                <img src={img} className={styles.clientPhoto} />
+                <div className={styles.clientName}>
+                    <h3>{name}</h3>
+                    <h4>{title}</h4>
+                </div>
+            </div>
+            <p className={styles.text}>{review}</p>
+            <div className={styles.starWrapper}>
+                <img src="img/Star.png" />
+                <img src="img/Star.png" />
+                <img src="img/Star.png" />
+                <img src="img/Star.png" />
+                <img src="img/Star.png" />
+            </div>
+        </div>
+    );
+};

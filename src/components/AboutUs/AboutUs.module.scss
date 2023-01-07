@@ -1,0 +1,224 @@
+.container {
+    max-width: 100%;
+    background: #191C26;
+    min-height: 630px;
+    
+    .wrapper {           
+        padding-top: 106px;
+        position: relative;
+        margin: 0 auto;
+        max-width: 1200px;
+        background: #191C26;
+
+        & .h2 {
+            position: relative;
+            margin-top: 30px;
+            width: 426px;
+            height: 121px;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 100%;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+        }
+    
+        & .p {
+            position: relative;
+            margin-top: 30px;
+            width: 610px;
+            height: 96px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+        }
+    
+        & .button {
+            position: relative;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-top: 35px;
+            width: 190.48px;
+            height: 52.38px;
+            background: linear-gradient(270deg, #7237BD 0%, #03BDFA 100%);
+            border-radius: 27.5px;
+            background-position: 100% 0;
+
+            &:hover {
+                background-position: 0 0;
+            }
+        }
+
+        & .ourTeam {
+            width: 483px;
+            height: 380px;
+            position: absolute;
+            top: 166px;
+            left: 700px;
+        }
+
+        & .appearanceLeft {
+            animation-name: appearanceLeft;
+            animation-duration: 1.5s;
+        }
+
+        & .appearanceRight {
+            animation-name: appearanceRight;
+            animation-duration: 1.5s;
+        }
+    }
+
+    & .flexWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;     
+        padding-top: 106px;
+        position: relative;
+        margin: 0 auto;
+        max-width: 600px;
+        background: #191C26;
+
+        & .h22 {
+            position: relative;
+            max-width: 330px;
+            height: 121px;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 100%;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+        }
+    
+        & .p2 {
+            position: relative;
+            max-width: 610px;
+            min-height: 96px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+        }
+    
+        & .button2 {
+            position: relative;
+            align-self: center;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 16px;
+            color: #FFFFFF;
+            width: 190.48px;
+            height: 52.38px;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+            border-radius: 27px;
+            background-position: 100% 0;
+            border: none;
+            margin-bottom: 80px;
+
+            &:hover {
+                animation: animateButton2  8s linear infinite;
+            }
+
+            &:before{
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                z-index: 0;
+                background: linear-gradient(90deg, var(--grad1), var(--grad2), var(--grad3), var(--grad4));
+                background-size: 400%;
+                border-radius: 40px;
+                opacity: 0;
+                transition: 0.5s;
+            
+            }
+            &:hover:before{
+                filter: blur(20px);
+                opacity: .6;
+                animation: animate 8s linear infinite;
+            }
+        }
+
+        & .ourTeam2 {
+            width: 100%;
+            max-width: 483px;
+            height: auto;
+            position: static;
+            align-self: center;
+        }
+
+        & .appearanceLeft {
+            animation-name: appearanceLeft;
+            animation-duration: 1.5s;
+        }
+
+        & .appearanceRight {
+            animation-name: appearanceRight;
+            animation-duration: 1.5s;
+        }
+
+        @media (max-width: 660px) {
+            margin-left: 28px;
+            margin-right: 20px;
+        }
+
+        @media (max-width: 420px) {
+
+            & .h22 {
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+@keyframes animateButton2 {
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 400%;
+	}
+}
+
+@keyframes appearanceLeft {
+    0%{
+        left: -200px;
+        opacity: 0;
+    }
+    100%{
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes appearanceRight {
+    0%{
+        left: 800px;
+        opacity: 0;
+    }
+    100%{
+        left: 700px;
+        opacity: 1;
+    }
+}
+
+@keyframes anime {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+
+
