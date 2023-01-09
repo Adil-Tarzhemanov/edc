@@ -7,6 +7,7 @@ import { reviews } from './data/reviews/reviews';
 import { UseWindowSize } from '../hooks/UseWindowSize/UseWindowSize';
 
 export const Reviews = () => {
+
     const size = UseWindowSize();
 
     const [offset, setOffset] = useState(0);
@@ -75,11 +76,11 @@ export const Reviews = () => {
                         onClick={handleRightClick}
                         alt='arrow'
                     />
-                    <div className={styles.dotWrapper}>
+                    {/* <div className={styles.dotWrapper}>
+                        <img src="img/dot.png"/>
                         <img src="img/dot.png" />
                         <img src="img/dot.png" />
-                        <img src="img/dot.png" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

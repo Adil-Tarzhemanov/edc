@@ -28,11 +28,11 @@ function App() {
                     setActiveModal={setActiveModal}
                 />
             )}
-            {/* <iframe 
+            <iframe 
                 className={styles.robotRiveUp} 
-                src="https://rive.app/s/JZkeziLpekWh9sl8641ORg/embed" 
+                src="https://rive.app/s/LG2GRg2Q7kqrQq2EoliAjg/embed"
                 title='robot' allowfullscreen>
-            </iframe> */}
+            </iframe>
             <Services />
             <AboutUs setActiveModal={setActiveModal} />
             <Quality />

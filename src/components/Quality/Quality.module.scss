@@ -58,10 +58,28 @@
                 }
             }
 
-            & .rangeAnimetion {
-                animation-name: range;
-                animation-duration: 5s;
+            & .rangeAnimetion1 {
+                animation-name: range1;
+                animation-duration: 2s;
                 animation-timing-function: ease;   
+            }
+
+            & .rangeAnimetion2 {
+                animation-name: range2;
+                animation-duration: 2s;
+                animation-timing-function: ease;
+            }
+
+            & .rangeAnimetion3 {
+                animation-name: range3;
+                animation-duration: 2s;
+                animation-timing-function: ease;
+            }
+
+            & .rangeAnimetion4 {
+                animation-name: range4;
+                animation-duration: 2s;
+                animation-timing-function: ease;
             }
         }
 
@@ -216,7 +234,7 @@
                         position: absolute;
                         top: 240.95px;
                         left: 48.57px;
-                        width: 283.81px;
+                        width: 260px;
                         height: 91.43px;
                         font-weight: 500;
                         font-size: 18px;
@@ -248,11 +266,50 @@
         }
     }
 
-    @keyframes range {
+    @keyframes range1 {
         0%{
+            left: -200px;
             opacity: 0;
         }
         100%{
+            left: 0px;
+            opacity: 1;   
+        }
+    }
+
+    @keyframes range2 {
+        0%{
+            left: -150px;
+            top: -150px;
+            opacity: 0;
+        }
+        100%{
+            left: 0px;
+            top: 0;
+            opacity: 1;   
+        }
+    }
+
+    @keyframes range3 {
+        0%{
+            right: -150px;
+            top: -150px;
+            opacity: 0;
+        }
+        100%{
+            right: 0px;
+            top: 0;
+            opacity: 1;   
+        }
+    }
+
+    @keyframes range4 {
+        0%{
+            right: -200px;
+            opacity: 0;
+        }
+        100%{
+            right: 0px;
             opacity: 1;   
         }
     }

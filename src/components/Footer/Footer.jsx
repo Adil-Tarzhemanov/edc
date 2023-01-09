@@ -1,6 +1,11 @@
 import { UseWindowSize } from '../hooks/UseWindowSize/UseWindowSize';
 import styles from './Footer.module.scss';
 
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 export const Footer = ({ setActiveModal }) => {
     const size = UseWindowSize();
 
@@ -8,7 +13,7 @@ export const Footer = ({ setActiveModal }) => {
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <h2 onClick={() => setActiveModal(true)}>Начать проект</h2>
-                {size.width > 1300 && (
+                {/* {size.width > 1300 && ( */}
                     <div>
                         <img
                             src="img/Ellipse1.png"
@@ -39,14 +44,14 @@ export const Footer = ({ setActiveModal }) => {
                             className={`${styles.ellipse7} ${styles.ellipse}`}
                         />
                     </div>
-                )}
+                 {/* )} */}
                 <div className={styles.textWrapper}>
                     <h3>© 2022 Eden Company, All Rights Reserved.</h3>
                     <div className={styles.imgWrapper}>
-                        <img src="img/instagram.svg" width={25} />
-                        <img src="img/linkedin.svg" width={25} />
-                        <img src="img/twitter.svg" width={25} />
-                        <img src="img/facebook.svg" width={25} />
+                        <InstagramIcon className={styles.socialMedia} sx={{ fontSize: 30 }} />
+                        <LinkedInIcon  className={styles.socialMedia} sx={{ fontSize: 30 }} />
+                        <TwitterIcon  className={styles.socialMedia} sx={{ fontSize: 30 }} />
+                        <FacebookIcon  className={styles.socialMedia} sx={{ fontSize: 30 }} />
                     </div>
                 </div>
             </div>

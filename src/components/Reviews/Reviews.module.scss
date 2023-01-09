@@ -45,14 +45,14 @@
 
     & .leftArrow {
         position: absolute;
-        top: 68%;
+        top: 73%;
         z-index: 1;
         cursor: pointer;
     }
 
     & .rightArrow {
         position: absolute;
-        top: 68%;
+        top: 73%;
         right: 0;
         z-index: 1;
         cursor: pointer;
@@ -102,5 +102,10 @@
     justify-content: center;
     margin-top: 39px;
     gap: 10px;
+
+    & .active {
+        background: #03BDFA;
+        border-radius: 50%;
+    }
 }
 

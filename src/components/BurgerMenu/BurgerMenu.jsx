@@ -14,7 +14,7 @@ export const BurgerMenu = ({ activeModal, setActiveModal }) => {
 
     return (
         <div className={styles.mobileHeader}>
-            <nav>
+            <nav className={menuActive && styles.active}>
                 <div
                     className={styles.burgerBtn}
                     onClick={() => setMenuActive(!menuActive)}

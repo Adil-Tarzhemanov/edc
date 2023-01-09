@@ -4,16 +4,16 @@ import { useInView } from 'react-intersection-observer';
 import { UseWindowSize } from '../hooks/UseWindowSize/UseWindowSize';
 
 export const AboutUs = ({ setActiveModal }) => {
-    const { ref: h2Ref } = useInView({
+    const { ref: h2Ref, inView: h2Visible, } = useInView({
         triggerOnce: true,
     });
-    const { ref: pRef } = useInView({
+    const { ref: pRef, inView: pVisible, } = useInView({
         triggerOnce: true,
     });
-    const { ref: imgRef } = useInView({
+    const { ref: imgRef, inView: imgVisible, } = useInView({
         triggerOnce: true,
     });
-    const { ref: buttonRef } = useInView({
+    const { ref: buttonRef, inView: buttonVisible, } = useInView({
         triggerOnce: true,
     });
 
@@ -28,30 +28,38 @@ export const AboutUs = ({ setActiveModal }) => {
                         valueText="О нас"
                         meteor
                     />
-                    <h2 className={`${styles.h2}`} ref={h2Ref}>
-                        Компания мечты
-                    </h2>
-                    <p className={`${styles.p}`} ref={pRef}>
-                        Компания “Eden Company” - это больше, чем группа людей,
-                        мы семья объединенная общей целью, где каждый член
-                        вносит огромный вклад в общее дело. Наша цель -
-                        продвижение современных технологий в массы, чтобы
-                        автоматизировать, облегчить и усовершенствовать жизнь
-                        людей.
-                    </p>
-                    <button
-                        className={`${styles.button}`}
-                        ref={buttonRef}
-                        onClick={() => setActiveModal(true)}
-                    >
-                        Связаться с нами
-                    </button>
-                    <img
-                        src="img/OurTeam.png"
-                        alt="team"
-                        className={`${styles.ourTeam}`}
-                        ref={imgRef}
-                    />
+                    <div ref={h2Ref}>
+                        {h2Visible && <h2 className={`${styles.h2} ${h2Visible && styles.appearanceLeft}`}>
+                            Компания мечты
+                        </h2>}
+                    </div>
+                    <div ref={pRef}>
+                        {pVisible && <p className={`${styles.p} ${pVisible && styles.appearanceLeft}`}>
+                            Компания “Eden Company” - это больше, чем группа людей,
+                            мы семья объединенная общей целью, где каждый член
+                            вносит огромный вклад в общее дело. Наша цель -
+                            продвижение современных технологий в массы, чтобы
+                            автоматизировать, облегчить и усовершенствовать жизнь
+                            людей.
+                        </p>}
+                    </div>
+                    <div ref={buttonRef}>
+                        {buttonVisible && <div className={`${styles.btnWrap} ${buttonVisible && styles.appearanceLeft}`}>
+                            <button
+                                className={`${styles.button}`} 
+                                onClick={() => setActiveModal(true)}
+                            >
+                                Связаться с нами
+                            </button>
+                        </div>}
+                    </div>
+                    <div ref={imgRef}>
+                        {imgVisible && <img
+                            src="img/OurTeam.png"
+                            alt="team"
+                            className={`${styles.ourTeam} ${imgVisible && styles.appearanceRight}`}
+                        />}
+                    </div>
                 </div>
             ) : (
                 <div className={styles.flexWrapper}>
@@ -60,30 +68,37 @@ export const AboutUs = ({ setActiveModal }) => {
                         valueText="О нас"
                         meteor
                     />
-                    <h2 className={`${styles.h22}`} ref={h2Ref}>
-                        Компания мечты
-                    </h2>
-                    <p className={`${styles.p2}`} ref={pRef}>
-                        Компания “Eden Company” - это больше, чем группа людей,
-                        мы семья объединенная общей целью, где каждый член
-                        вносит огромный вклад в общее дело. Наша цель -
-                        продвижение современных технологий в массы, чтобы
-                        автоматизировать, облегчить и усовершенствовать жизнь
-                        людей.
-                    </p>
-                    <img
-                        src="img/OurTeam.png"
-                        alt="team"
-                        className={`${styles.ourTeam2}`}
-                        ref={imgRef}
-                    />
-                    <button
-                        className={`${styles.button2}`}
-                        ref={buttonRef}
-                        onClick={() => setActiveModal(true)}
-                    >
-                        Связаться с нами
-                    </button>
+                    <div ref={h2Ref}>
+                        {h2Visible && <h2 className={`${styles.h22} ${styles.appearanceLeft}`} ref={h2Ref}>
+                            Компания мечты
+                        </h2>}
+                    </div>
+                    <div ref={pRef}>
+                        {pVisible && <p className={`${styles.p2} ${styles.appearanceRight}`} ref={pRef}>
+                            Компания “Eden Company” - это больше, чем группа людей,
+                            мы семья объединенная общей целью, где каждый член
+                            вносит огромный вклад в общее дело. Наша цель -
+                            продвижение современных технологий в массы, чтобы
+                            автоматизировать, облегчить и усовершенствовать жизнь
+                            людей.
+                        </p>}
+                    </div>
+                    <div ref={imgRef}>
+                    {imgVisible && <img
+                            src="img/OurTeam.png"
+                            alt="team"
+                            className={`${styles.ourTeam2} ${styles.appearanceLeft}`}
+                            ref={imgRef}
+                        />}
+                    </div>
+                    {/* <div ref={buttonRef}> */}
+                        <button
+                            className={`${styles.button2}`}
+                            onClick={() => setActiveModal(true)}
+                        >
+                            Связаться с нами
+                        </button>
+                    {/* </div> */}
                 </div>
             )}
         </div>

@@ -1,8 +1,11 @@
 import { useInView } from 'react-intersection-observer';
+import { UseWindowSize } from '../hooks/UseWindowSize/UseWindowSize';
 import { Section } from '../Section/Section';
 import styles from './Services.module.scss';
 
 export const Services = () => {
+    const size = UseWindowSize();
+
     const {
         ref: h2Ref,
         inView: h2Visible,
@@ -23,41 +26,49 @@ export const Services = () => {
     return (
         <div className={styles.container} id="services">
             <div className={styles.wrapper}>
-                <div className={styles.sectionAndEarth}>
-                    <div className={styles.headAndSection}>
-                        <Section valueText="услуги" />
-                        <h2
-                            className={`${h2Visible && styles.h2} ${
-                                h2Visible && styles.appearanceLeft
+                <div className={styles.topPart}>
+                    <div className={styles.leftTopPart}>
+                        <div className={styles.headAndSection}>
+                            <Section valueText="услуги" />
+                            <h2
+                                className={`${h2Visible && styles.h2} ${
+                                    h2Visible && styles.appearanceLeft
+                                }`}
+                                ref={h2Ref}
+                            >
+                                Продвигая <br /> технологии
+                            </h2>
+                        </div>
+                        <p
+                            ref={pRef}
+                            className={`${pVisible && styles.headText} ${
+                                pVisible && styles.appearanceLeft
                             }`}
-                            ref={h2Ref}
                         >
-                            Продвигая <br /> технологии
-                        </h2>
+                            &laquo;Eden Company&raquo; готова реализовать для вас
+                            профессиональный проект любой сложности в&nbsp;сфере
+                            IT-технологий. Трепетное отношение к&nbsp;каждому отдельному
+                            проекту, с&nbsp;использованием передовых технологии
+                            в&nbsp;области программирования и&nbsp;дизайна, позволяет
+                            нам создавать продукты высокого качества.
+                        </p>
                     </div>
+                    {size.width > 1200 && <iframe 
+                        className={styles.robotRiveUp} 
+                        src="https://rive.app/s/hEiRduSrFkqxYpkyBqAhPw/embed"
+                        title='robot' allowfullscreen>
+                    </iframe>}
                 </div>
-                <p
-                    ref={pRef}
-                    className={`${pVisible && styles.headText} ${
-                        pVisible && styles.appearanceLeft
-                    }`}
-                >
-                    &laquo;Eden Company&raquo; готова реализовать для вас
-                    профессиональный проект любой сложности в&nbsp;сфере
-                    IT-технологий. Трепетное отношение к&nbsp;каждому отдельному
-                    проекту, с&nbsp;использованием передовых технологии
-                    в&nbsp;области программирования и&nbsp;дизайна, позволяет
-                    нам создавать продукты высокого качества.
-                </p>
 
                 <div className={styles.services}>
-                    <div className={styles.serviceWrapper}>
-                        <img src="img/monitor.png" />
-                        <div
-                            className={`${styles.service} ${
+                    <div className={`${styles.serviceWrapper} ${
                                 firstVisible && styles.first
                             }`}
-                            ref={firstRef}
+                         ref={firstRef}>
+                            
+                        <img src="img/monitor.png" />
+                        <div
+                            className={styles.service}
                         >
                             <h3>
                                 Разработка Веб -
@@ -73,13 +84,14 @@ export const Services = () => {
                             </p>
                         </div>
                     </div>
-                    <div className={styles.serviceWrapper}>
-                        <img src="img/mobile.png" />
-                        <div
-                            className={`${styles.service} ${
+                    <div className={`${styles.serviceWrapper} ${
                                 secondVisible && styles.second
                             }`}
-                            ref={secondRef}
+                         ref={secondRef}>
+                        <img src="img/mobile.png" />
+                        <div
+                            className={styles.service}
+                            
                         >
                             <h3>Разработка Приложения</h3>
                             <p>
@@ -90,13 +102,13 @@ export const Services = () => {
                             </p>
                         </div>
                     </div>
-                    <div className={styles.serviceWrapper}>
-                        <img src="img/ui.png" />
-                        <div
-                            className={`${styles.service} ${
+                    <div className={`${styles.serviceWrapper} ${
                                 firstVisible && styles.first
                             }`}
-                            ref={firstRef}
+                         ref={firstRef}>
+                        <img src="img/ui.png" />
+                        <div
+                            className={styles.service}
                         >
                             <h3 className={styles.design}>UI/UX Дизайн</h3>
                             <p>
@@ -107,13 +119,13 @@ export const Services = () => {
                             </p>
                         </div>
                     </div>
-                    <div className={styles.serviceWrapper}>
-                        <img src="img/bot.png" />
-                        <div
-                            className={`${styles.service} ${
+                    <div className={`${styles.serviceWrapper} ${
                                 secondVisible && styles.second
                             }`}
-                            ref={secondRef}
+                         ref={secondRef}>
+                        <img src="img/bot.png" />
+                        <div
+                            className={styles.service}
                         >
                             <h3>Разработка Теглаграмм Бота</h3>
                             <p>

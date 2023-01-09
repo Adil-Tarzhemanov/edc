@@ -36,7 +36,7 @@ export const Quality = () => {
                         <div
                             className={`${
                                 rangeVisible && styles.rangeWrapper
-                            } ${rangeVisible && styles.rangeAnimetion}`}
+                            } ${rangeVisible && styles.rangeAnimetion1}`}
                         >
                             <div className={styles.range}>
                                 <p>более</p>
@@ -53,7 +53,7 @@ export const Quality = () => {
                         <div
                             className={`${
                                 rangeVisible && styles.rangeWrapper
-                            } ${rangeVisible && styles.rangeAnimetion}`}
+                            } ${rangeVisible && styles.rangeAnimetion2}`}
                         >
                             <div
                                 className={`${styles.range} ${styles.rangePercent}`}
@@ -72,7 +72,7 @@ export const Quality = () => {
                         <div
                             className={`${
                                 rangeVisible && styles.rangeWrapper
-                            } ${rangeVisible && styles.rangeAnimetion}`}
+                            } ${rangeVisible && styles.rangeAnimetion3}`}
                         >
                             <div className={styles.range}>
                                 <p>более</p>
@@ -89,7 +89,7 @@ export const Quality = () => {
                         <div
                             className={`${
                                 rangeVisible && styles.rangeWrapper
-                            } ${rangeVisible && styles.rangeAnimetion}`}
+                            } ${rangeVisible && styles.rangeAnimetion4}`}
                         >
                             <div className={styles.range}>
                                 <p>более</p>
