@@ -54,40 +54,40 @@ export const Footer = ({ setActiveModal }) => {
                 ) : (
                     <div className={styles.circleWrapper1}>
                         <img
-                            src="img/Ellipse6.png"
+                            src="img/pathEllipse/Ellipse1.png"
                             className={`${styles.ellipse11} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                         <img
-                            src="img/Ellipse2.png"
+                            src="img/pathEllipse/Ellipse2.png"
                             className={`${styles.ellipse22} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                         <img
-                            src="img/Ellipse4.png"
+                            src="img/pathEllipse/Ellipse3.png"
                             className={`${styles.ellipse33} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                          <img
-                            src="img/Ellipse1.png"
+                            src="img/pathEllipse/Ellipse4.png"
                             className={`${styles.ellipse44} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                        <img
-                            src="img/Ellipse7.png"
+                            src="img/pathEllipse/Ellipse5.png"
                             className={`${styles.ellipse55} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                          <img
-                            src="img/Ellipse4.png"
+                            src="img/pathEllipse/Ellipse6.png"
                             className={`${styles.ellipse66} ${styles.ellipse}`}
                             alt='ellipse'
                         />
-                        {/*<img
-                            src="img/Ellipse7.png"
+                        <img
+                            src="img/pathEllipse/Ellipse7.png"
                             className={`${styles.ellipse77} ${styles.ellipse}`}
                             alt='ellipse'
-                        /> */}
+                        />
                     </div>
                 )}
                 <div className={styles.textWrapper}>
