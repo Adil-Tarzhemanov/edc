@@ -19,10 +19,18 @@ export const ModalWindow = ({ activeModal, setActiveModal }) => {
                     <textarea placeholder="сообщение" />
                     <button className={styles.send}>Отправить</button>
                     <div className={styles.imgWrapper}>
-                        <TelegramIcon className={styles.socialMedia} />
-                        <WhatsAppIcon className={styles.socialMedia} />
-                        <FacebookIcon className={styles.socialMedia} />
-                        <MailOutlineIcon className={styles.socialMedia} />
+                        <a href='https://t.me/edencompanytech' target='_blank'>
+                            <TelegramIcon className={styles.socialMedia} />
+                        </a>
+                        <a href='https://wa.me/+905056328364' target='_blank'>
+                            <WhatsAppIcon className={styles.socialMedia} />
+                        </a>
+                        <a href='https://www.facebook.com/profile.php?id=100089154881151&is_tour_completed=true' target='_blank'>
+                            <FacebookIcon className={styles.socialMedia} />
+                        </a>
+                        <a href='https://edencompanytech@gmail.com' target='_blank'>
+                            <MailOutlineIcon className={styles.socialMedia} />
+                        </a>
                     </div>
                 </div>
             </div>

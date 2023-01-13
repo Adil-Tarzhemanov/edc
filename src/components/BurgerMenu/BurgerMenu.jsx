@@ -15,11 +15,15 @@ export const BurgerMenu = ({ activeModal, setActiveModal }) => {
     return (
         <div className={styles.mobileHeader}>
             <nav className={menuActive && styles.active}>
-                <div
-                    className={styles.burgerBtn}
-                    onClick={() => setMenuActive(!menuActive)}
-                >
-                    <span />
+                <div className={styles.btnWrapper}>
+                    <div
+                        className={styles.burgerBtn}
+                        onClick={() => setMenuActive(!menuActive)}
+                    >
+                        <span className={styles.span1} />
+                        <span className={styles.span2} />
+                        <span className={styles.span3} />
+                    </div>
                 </div>
             </nav>
             <Menu

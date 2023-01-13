@@ -29,6 +29,7 @@ function App() {
                 />
             )}
             <iframe 
+                id='home'
                 className={styles.robotRiveUp} 
                 src="https://rive.app/s/LG2GRg2Q7kqrQq2EoliAjg/embed"
                 title='robot' allowfullscreen>

@@ -11,45 +11,86 @@
         z-index: 50;
         backdrop-filter: blur(2px);
 
-        & .burgerBtn {
-            width: 30px;
-            height: 30px;
-            margin-left: 20px;
-            position: relative;
-            background: rgba(17, 17, 17, 0.95);
-            cursor: pointer;
+        & .btnWrapper {
+            width: 100vw;
+            display: flex;
+            justify-content: flex-end;
 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
+            & .burgerBtn {
                 width: 30px;
-                background: white;
-                height: 3px;
-            }
+                height: 30px;
+                margin-right: 20px;
+                position: relative;
+                background: rgba(17, 17, 17, 0.8);
+                cursor: pointer;
+    
+                // &::before {
+                //     content: '';
+                //     position: absolute;
+                //     top: 0;
+                //     width: 30px;
+                //     background: white;
+                //     height: 3px;
+                // }
+    
+                & span {
+                    position: absolute;
+                    width: 30px;
+                    background: white;
+                    height: 3px;
+                }
 
-            & span {
-                position: absolute;
-                top: 14px;
-                width: 30px;
-                background: white;
-                height: 3px;
-            }
+                & .span1 {
+                    top: 0;
+                    transition: 0.4s;
+                }
 
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;    
-                width: 30px;
-                background: white;
-                height: 3px;
+                & .span2 {
+                    top: 14px;
+                    transition: 0.4s;
+                }
+
+                & .span3 {
+                    bottom: 0;
+                    transition: 0.4s;
+                }
+    
+                // &::after {
+                //     content: '';
+                //     position: absolute;
+                //     bottom: 0;    
+                //     width: 30px;
+                //     background: white;
+                //     height: 3px;
+                // }
             }
         }
     }
 
     & .active {
-        z-index: 51;
+        // z-index: 51;
         background: #191C26;
         border-bottom: 1px solid white;
+
+        & .btnWrapper {
+            & .burgerBtn {
+                background: #191C26;
+
+                & .span1 {
+                    top: 14px;
+                    transform: rotate(135deg);
+                }
+
+                & .span2 {
+                    opacity: 0;
+                    transform: translateX(-60px)
+                }
+
+                & .span3 {
+                    top: 14px;
+                    transform: rotate(-135deg);
+                }
+            }
+        }
     }
 }

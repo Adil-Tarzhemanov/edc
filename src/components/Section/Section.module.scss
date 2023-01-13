@@ -33,6 +33,21 @@
     animation-duration: 1s;
 }
 
+@media (max-width: 500px) {
+    .section {
+        img {
+            width: 50px;
+            top: -15px;
+            left: -10px;
+            z-index: 2;
+        }
+
+        & .lineSection {
+            width: 38px;
+        }
+    }
+}
+
 
 @keyframes section-appearance {
     0%{

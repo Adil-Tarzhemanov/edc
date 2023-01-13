@@ -5,31 +5,34 @@
 
     & .container {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
         max-width: 1519px;
+        height: 309px;
         margin: 0 auto;
         position: relative;
 
         h2 {
-            position: absolute;
-            top: 70px;
+            justify-self: center;
             font-weight: 700;
             font-size: 64px;
             color: #FFFFFF;
             cursor: pointer;
-            // transition: transform 0.25s;
+            transition: transform 0.25s;
             z-index: 1;
+            padding-top: 40px;
     
-            // &:hover {
-            //     transform: scale(1.05);
-            // }
-        }
-
+            &:hover {
+                transform: scale(1.05);
+            }
+        }    
+        
         & .textWrapper {
             display: flex;
             justify-content: space-around;
-            gap: 600px;
-            padding-top: 230px;
+            width: 99vw;
+            // gap: 600px;
             z-index: 1;
 
             h3 {
@@ -75,60 +78,123 @@
             }
         }
     
-        & .ellipse {
-            position: absolute;
-            animation: move 20s linear infinite;
+        & .circleWrapper {
+            width: 100vw;
+
+            & .ellipse {
+                position: absolute;
+                animation: move 20s linear infinite;
+            }
+        
+            & .ellipse1 {
+                left: 120px;
+                top: 50px;
+                offset-path: path('M240.847 31.0389C175.347 -7.96122 97.5877 -3.59594 40.0153 13.8601C-17.5572 31.3162 -6.14078 54.3593 40.0153 90.039C94.3474 132.039 306.347 70.0391 240.847 31.0389Z');
+            }
+        
+            & .ellipse2 {
+                left: 140px;
+                top: 150px;
+                animation-direction: reverse;
+                animation-duration: 25s;
+                offset-path: path('M240.847 31.0389C175.347 -7.96122 97.5877 -3.59594 40.0153 13.8601C-17.5572 31.3162 -6.14078 54.3593 40.0153 90.039C94.3474 132.039 306.347 70.0391 240.847 31.0389Z')
+            }
+        
+            & .ellipse3 {
+                left: 400px;
+                top: 40px;
+                animation-direction: reverse;
+                animation-duration: 22s;
+                offset-path: path('M233.565 34.3217C134.992 -3.86019 77.4495 -4.43847 39.4214 8.8672C1.39328 22.1729 -0.207882 45.4291 1.3933 89.8588C3.39478 145.396 332.138 72.5036 233.565 34.3217Z');
+            }
+        
+            & .ellipse4 {
+                left: 420px;
+                top: 140px;
+                animation-duration: 27s;
+                offset-path: path('M241 31.4999C175.5 -7.50029 97.7403 -3.135 40.1679 14.321C-17.4045 31.7771 -5.98816 54.8203 40.1679 90.5C94.5 132.5 306.5 70.5001 241 31.4999Z');
+            }
+        
+            & .ellipse5 {
+                left: 670px;
+                top: 100px;
+                animation-direction: reverse;
+                offset-path: path('M353.09 44.7156C203.856 -5.37622 116.74 -6.13487 59.1678 11.3212C1.5954 28.7772 -0.828665 59.2877 1.59544 117.576C4.62556 190.437 502.324 94.8074 353.09 44.7156Z');
+            }
+        
+            & .ellipse6 {
+                left: 900px;
+                top: 160px;
+                offset-path: path('M277.658 38.3056C202.106 -10.129 112.412 -4.70774 46.0032 16.9711C-20.4052 38.6499 -7.23672 67.2674 46.0032 111.578C108.674 163.738 353.211 86.7402 277.658 38.3056Z');
+            }
+        
+            & .ellipse7 {
+                left: 1000px;
+                top: 60px;
+                animation-direction: reverse;
+                offset-path: path('M240.58 35.0997C175.153 -9.17262 97.4802 -4.21723 39.9718 15.5986C-17.5365 35.4143 -6.13283 61.5725 39.9718 102.075C94.2434 149.753 306.007 79.3719 240.58 35.0997Z');
+            }
         }
-    
-        & .ellipse1 {
-            left: 120px;
-            top: 50px;
-            offset-path: path('M240.847 31.0389C175.347 -7.96122 97.5877 -3.59594 40.0153 13.8601C-17.5572 31.3162 -6.14078 54.3593 40.0153 90.039C94.3474 132.039 306.347 70.0391 240.847 31.0389Z');
+
+        
+        & .circleWrapper1 {
+            width: 100vw;
+
+            & .ellipse {
+                position: absolute;
+                animation: move 20s linear infinite;
+            }
+        
+            & .ellipse11 {
+                left: 20px;
+                top: 50px;
+                offset-path: path('M240.847 31.0389C175.347 -7.96122 97.5877 -3.59594 40.0153 13.8601C-17.5572 31.3162 -6.14078 54.3593 40.0153 90.039C94.3474 132.039 306.347 70.0391 240.847 31.0389Z');
+            }
+        
+            & .ellipse22 {
+                left: 30px;
+                top: 150px;
+                animation-direction: reverse;
+                animation-duration: 25s;
+                offset-path: path('M240.847 31.0389C175.347 -7.96122 97.5877 -3.59594 40.0153 13.8601C-17.5572 31.3162 -6.14078 54.3593 40.0153 90.039C94.3474 132.039 306.347 70.0391 240.847 31.0389Z')
+            }
+        
+            & .ellipse33 {
+                left: 90px;
+                top: 40px;
+                animation-direction: reverse;
+                animation-duration: 22s;
+                offset-path: path('M233.565 34.3217C134.992 -3.86019 77.4495 -4.43847 39.4214 8.8672C1.39328 22.1729 -0.207882 45.4291 1.3933 89.8588C3.39478 145.396 332.138 72.5036 233.565 34.3217Z');
+            }
+        
+            & .ellipse44 {
+                left: 65px;
+                top: 140px;
+                animation-duration: 27s;
+                offset-path: path('M241 31.4999C175.5 -7.50029 97.7403 -3.135 40.1679 14.321C-17.4045 31.7771 -5.98816 54.8203 40.1679 90.5C94.5 132.5 306.5 70.5001 241 31.4999Z');
+            }
+        
+            & .ellipse55 {
+                left: 80px;
+                top: 100px;
+                animation-direction: reverse;
+                offset-path: path('M353.09 44.7156C203.856 -5.37622 116.74 -6.13487 59.1678 11.3212C1.5954 28.7772 -0.828665 59.2877 1.59544 117.576C4.62556 190.437 502.324 94.8074 353.09 44.7156Z');
+            }
+        
+            & .ellipse66 {
+                left: 90px;
+                top: 160px;
+                offset-path: path('M277.658 38.3056C202.106 -10.129 112.412 -4.70774 46.0032 16.9711C-20.4052 38.6499 -7.23672 67.2674 46.0032 111.578C108.674 163.738 353.211 86.7402 277.658 38.3056Z');
+            }
+        
+            & .ellipse77 {
+                left: 1000px;
+                top: 60px;
+                animation-direction: reverse;
+                offset-path: path('M240.58 35.0997C175.153 -9.17262 97.4802 -4.21723 39.9718 15.5986C-17.5365 35.4143 -6.13283 61.5725 39.9718 102.075C94.2434 149.753 306.007 79.3719 240.58 35.0997Z');
+            }
         }
-    
-        & .ellipse2 {
-            left: 140px;
-            top: 150px;
-            animation-direction: reverse;
-            animation-duration: 25s;
-            offset-path: path('M240.847 31.0389C175.347 -7.96122 97.5877 -3.59594 40.0153 13.8601C-17.5572 31.3162 -6.14078 54.3593 40.0153 90.039C94.3474 132.039 306.347 70.0391 240.847 31.0389Z')
-        }
-    
-        & .ellipse3 {
-            left: 400px;
-            top: 40px;
-            animation-direction: reverse;
-            animation-duration: 22s;
-            offset-path: path('M233.565 34.3217C134.992 -3.86019 77.4495 -4.43847 39.4214 8.8672C1.39328 22.1729 -0.207882 45.4291 1.3933 89.8588C3.39478 145.396 332.138 72.5036 233.565 34.3217Z');
-        }
-    
-        & .ellipse4 {
-            left: 420px;
-            top: 140px;
-            animation-duration: 27s;
-            offset-path: path('M241 31.4999C175.5 -7.50029 97.7403 -3.135 40.1679 14.321C-17.4045 31.7771 -5.98816 54.8203 40.1679 90.5C94.5 132.5 306.5 70.5001 241 31.4999Z');
-        }
-    
-        & .ellipse5 {
-            left: 670px;
-            top: 100px;
-            animation-direction: reverse;
-            offset-path: path('M353.09 44.7156C203.856 -5.37622 116.74 -6.13487 59.1678 11.3212C1.5954 28.7772 -0.828665 59.2877 1.59544 117.576C4.62556 190.437 502.324 94.8074 353.09 44.7156Z');
-        }
-    
-        & .ellipse6 {
-            left: 900px;
-            top: 160px;
-            offset-path: path('M277.658 38.3056C202.106 -10.129 112.412 -4.70774 46.0032 16.9711C-20.4052 38.6499 -7.23672 67.2674 46.0032 111.578C108.674 163.738 353.211 86.7402 277.658 38.3056Z');
-        }
-    
-        & .ellipse7 {
-            left: 1000px;
-            top: 60px;
-            animation-direction: reverse;
-            offset-path: path('M240.58 35.0997C175.153 -9.17262 97.4802 -4.21723 39.9718 15.5986C-17.5365 35.4143 -6.13283 61.5725 39.9718 102.075C94.2434 149.753 306.007 79.3719 240.58 35.0997Z');
-        }
-    
+
         @keyframes move {
             100%{
                 offset-distance: 100%;

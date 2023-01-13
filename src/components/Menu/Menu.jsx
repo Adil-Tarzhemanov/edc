@@ -41,6 +41,7 @@ export const Menu = ({
                     ))}
                 </ul>
                 <button onClick={onProject}>Заказать проект</button>
+                {size.width < 390 && <img src='img/backMobileCircle.png' />}
             </div>
         </div>
     );

@@ -2,9 +2,15 @@
   max-width: 100%;
 
   & .robotRiveUp {
+    padding-top: 80px;
     border: none;
     width: 99vw;
     height: 647px;
+
+    @media (max-width: 600px) {
+      padding-top: 30px;
+      height: 547px;
+    }
   }
 }
 

@@ -203,10 +203,16 @@
     }
 }
 
+@media (max-width: 600px) {
+    .container {
+        margin-top: 0px;
+    }
+}
+
 @keyframes appearanceLeft {
     0%{
         left: -200px;
-        opacity: 0;;
+        opacity: 0;
     }
     100%{
         left: 0;

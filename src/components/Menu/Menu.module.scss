@@ -21,6 +21,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 70px;
+        position: relative;
         width: 30%;
         height: 100%;
         background: #191C26;
@@ -64,6 +65,12 @@
                 background: white;
                 color: #191C26;
             }
+        }
+
+        img {
+            position: absolute;
+            top: 20px;
+            right: 0;
         }
     }
 }
