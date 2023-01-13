@@ -54,37 +54,37 @@ export const Footer = ({ setActiveModal }) => {
                 ) : (
                     <div className={styles.circleWrapper1}>
                         <img
-                            src="img/pathEllipse/Ellipse1.png"
+                            src="img/pathEllipse/ellipse1.png"
                             className={`${styles.ellipse11} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                         <img
-                            src="img/pathEllipse/Ellipse2.png"
+                            src="img/pathEllipse/ellipse2.png"
                             className={`${styles.ellipse22} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                         <img
-                            src="img/pathEllipse/Ellipse3.png"
+                            src="img/pathEllipse/ellipse3.png"
                             className={`${styles.ellipse33} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                          <img
-                            src="img/pathEllipse/Ellipse4.png"
+                            src="img/pathEllipse/ellipse4.png"
                             className={`${styles.ellipse44} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                        <img
-                            src="img/pathEllipse/Ellipse5.png"
+                            src="img/pathEllipse/ellipse5.png"
                             className={`${styles.ellipse55} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                          <img
-                            src="img/pathEllipse/Ellipse6.png"
+                            src="img/pathEllipse/ellipse6.png"
                             className={`${styles.ellipse66} ${styles.ellipse}`}
                             alt='ellipse'
                         />
                         <img
-                            src="img/pathEllipse/Ellipse7.png"
+                            src="img/pathEllipse/ellipse7.png"
                             className={`${styles.ellipse77} ${styles.ellipse}`}
                             alt='ellipse'
                         />
