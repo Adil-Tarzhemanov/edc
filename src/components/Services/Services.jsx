@@ -45,7 +45,7 @@ export const Services = () => {
                                 pVisible && styles.appearanceLeft
                             }`}
                         >
-                            &laquo;Eden Company&raquo; готова реализовать для вас
+                            &laquo;<span>Eden Company</span>&raquo; готова реализовать для вас
                             профессиональный проект любой сложности в&nbsp;сфере
                             IT-технологий. Трепетное отношение к&nbsp;каждому отдельному
                             проекту, с&nbsp;использованием передовых технологии

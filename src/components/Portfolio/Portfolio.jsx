@@ -67,7 +67,7 @@ export const Portfolio = () => {
                                     </div>
                                     <div className={styles.mobileProjectWrap}>
                                         <img
-                                            src="img/sushi.png"
+                                            src="img/jeans3.png"
                                             className={styles.mobileProject}
                                         />
                                     </div>
