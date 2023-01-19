@@ -35,8 +35,8 @@ export const Header = () => {
                 <div className={styles.connectionWrapper}>
                     <p>Связаться с нами</p>
                     <h4>
-                        <a href="tel:(+998 (95) 097-20-37)">
-                            +998 (95) 097-20-37
+                        <a href="tel:(+998 (77) 071-20-37)">
+                            +998 (77) 071-20-37
                         </a>
                     </h4>
                 </div>
