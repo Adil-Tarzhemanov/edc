@@ -9,12 +9,12 @@ export const BurgerMenu = ({ activeModal, setActiveModal }) => {
         { value: 'Главная', to: 'home' },
         { value: 'Услуги', to: 'services' },
         { value: 'О нас', to: 'aboutUs' },
-        { value: 'Портфолио', to: 'portfolio' },
+        // { value: 'Портфолио', to: 'portfolio' },
     ];
 
     return (
         <div className={styles.mobileHeader}>
-            <nav className={menuActive && styles.active}>
+            <nav className={menuActive ? styles.active : ''}>
                 <div className={styles.connectionWrapper}>
                     <p>Связаться с нами</p>
                     <h4>

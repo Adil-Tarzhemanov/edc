@@ -29,7 +29,7 @@ export const Header = () => {
                             О нас
                         </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link
                             to="portfolio"
                             smooth
@@ -38,7 +38,7 @@ export const Header = () => {
                         >
                             Портфолио
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
                 <div className={styles.connectionWrapper}>
                     <p>Связаться с нами</p>

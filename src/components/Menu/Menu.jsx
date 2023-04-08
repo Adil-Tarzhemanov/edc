@@ -33,6 +33,7 @@ export const Menu = ({
                             smooth={true}
                             offset={-100}
                             duration={500}
+                            key={item.value}
                         >
                             <li onClick={() => setMenuActive(false)}>
                                 {item.value}
@@ -41,7 +42,7 @@ export const Menu = ({
                     ))}
                 </ul>
                 <button onClick={onProject}>Заказать проект</button>
-                {size.width < 500 && <img src='img/backMobileCircle.png' />}
+                {size.width < 500 && <img src='img/backMobileCircle.png' alt='circle' />}
             </div>
         </div>
     );

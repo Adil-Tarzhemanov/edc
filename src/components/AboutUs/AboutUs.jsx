@@ -33,7 +33,7 @@ export const AboutUs = ({ setActiveModal }) => {
                     <div>
                         <div className={styles.btnWrap}>
                             <button
-                                className={`${styles.button}`} 
+                                className={styles.button} 
                                 onClick={() => setActiveModal(true)}
                             >
                                 Связаться с нами

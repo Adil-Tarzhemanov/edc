@@ -21,16 +21,18 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     background: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(2px);
+    user-select: none;
 
     .logoWrapper {
         display: flex;
         align-items: center;
+        gap: 5px;
 
         .logoText {
             font-family: Aldrich;
             line-height: 110%;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 16px;
             background: linear-gradient(90deg, #03BDFA 0%, #7237BD 100%);
             background-clip: text;
             -webkit-text-fill-color: transparent;

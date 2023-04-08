@@ -24,11 +24,9 @@ export const Home = () => {
                     setActiveModal={setActiveModal}
                 />
             )}
-            <figure>
-                <img src="img/MainRobots/HomeRobot.gif" 
-                     className={styles.robotRiveUp} 
-                     alt="robot" />
-            </figure>
+            <img src="img/MainRobots/HomeRobot.gif" 
+                className={styles.robotRiveUp} 
+                alt="robot" />
             {/* <iframe 
                 id='home'
                 className={styles.robotRiveUp} 
@@ -42,12 +40,7 @@ export const Home = () => {
             {/* <Trust /> */}
             <Reviews />
             <Footer setActiveModal={setActiveModal} />
-            {activeModal && (
-                <ModalWindow
-                    activeModal={activeModal}
-                    setActiveModal={setActiveModal}
-                />
-            )}
+            {activeModal && <ModalWindow setActiveModal={setActiveModal} />}
         </>
     )
 }
