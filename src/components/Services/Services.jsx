@@ -1,27 +1,9 @@
-import { useInView } from 'react-intersection-observer';
-import { UseWindowSize } from '../hooks/UseWindowSize/UseWindowSize';
+// import { UseWindowSize } from '../hooks/UseWindowSize/UseWindowSize';
 import { Section } from '../Section/Section';
 import styles from './Services.module.scss';
 
 export const Services = () => {
-    const size = UseWindowSize();
-
-    const {
-        ref: h2Ref,
-        inView: h2Visible,
-    } = useInView({ triggerOnce: true, threshold: 1 });
-    const {
-        ref: pRef,
-        inView: pVisible,
-    } = useInView({ triggerOnce: true, threshold: 0.1 });
-    const {
-        ref: firstRef,
-        inView: firstVisible,
-    } = useInView({ triggerOnce: true, threshold: 0.1 });
-    const {
-        ref: secondRef,
-        inView: secondVisible,
-    } = useInView({ triggerOnce: true, threshold: 0.1 });
+    // const size = UseWindowSize();
 
     return (
         <div className={styles.container} id="services">
@@ -30,46 +12,31 @@ export const Services = () => {
                     <div className={styles.leftTopPart}>
                         <div className={styles.headAndSection}>
                             <Section valueText="услуги" />
-                            <h2
-                                className={`${h2Visible && styles.h2} ${
-                                    h2Visible && styles.appearanceLeft
-                                }`}
-                                ref={h2Ref}
-                            >
+                            <h2 className={styles.h2}>
                                 Продвигая <br /> технологии
                             </h2>
                         </div>
-                        <p
-                            ref={pRef}
-                            className={`${pVisible && styles.headText} ${
-                                pVisible && styles.appearanceLeft
-                            }`}
-                        >
-                            &laquo;<span>Eden Company</span>&raquo; готова реализовать для вас
-                            профессиональный проект любой сложности в&nbsp;сфере
-                            IT-технологий. Трепетное отношение к&nbsp;каждому отдельному
-                            проекту, с&nbsp;использованием передовых технологии
-                            в&nbsp;области программирования и&nbsp;дизайна, позволяет
-                            нам создавать продукты высокого качества.
-                        </p>
+                        <div>
+                            <p className={styles.headText}>
+                                &laquo;<span>Eden Company</span>&raquo; готова реализовать для вас
+                                профессиональный проект любой сложности в&nbsp;сфере
+                                IT-технологий. Трепетное отношение к&nbsp;каждому отдельному
+                                проекту, с&nbsp;использованием передовых технологии
+                                в&nbsp;области программирования и&nbsp;дизайна, позволяет
+                                нам создавать продукты высокого качества.
+                            </p>
+                        </div>
                     </div>
-                    {size.width > 1200 && <iframe 
+                    {/* {size.width > 1200 && <iframe 
                         className={styles.robotRiveUp} 
                         src="https://rive.app/s/hEiRduSrFkqxYpkyBqAhPw/embed"
                         title='robot' allowfullscreen>
-                    </iframe>}
+                    </iframe>} */}
                 </div>
-
                 <div className={styles.services}>
-                    <div className={`${styles.serviceWrapper} ${
-                                firstVisible && styles.first
-                            }`}
-                         ref={firstRef}>
-                            
-                        <img src="img/monitor.png" />
-                        <div
-                            className={styles.service}
-                        >
+                    <div className={styles.serviceWrapper}>
+                        <img src="img/monitor.png" alt='service' />
+                        <div className={styles.service}>
                             <h3>
                                 Разработка <br /> 
                                 Веб - сайта
@@ -83,11 +50,8 @@ export const Services = () => {
                             </p>
                         </div>
                     </div>
-                    <div className={`${styles.serviceWrapper} ${
-                                secondVisible && styles.second
-                            }`}
-                         ref={secondRef}>
-                        <img src="img/mobile.png" />
+                    <div className={styles.serviceWrapper}>
+                        <img src="img/mobile.png" alt='service' />
                         <div
                             className={styles.service}
                             
@@ -101,11 +65,8 @@ export const Services = () => {
                             </p>
                         </div>
                     </div>
-                    <div className={`${styles.serviceWrapper} ${
-                                firstVisible && styles.first
-                            }`}
-                         ref={firstRef}>
-                        <img src="img/ui.png" />
+                    <div className={styles.serviceWrapper}>
+                        <img src="img/ui.png" alt='service' />
                         <div
                             className={styles.service}
                         >
@@ -118,11 +79,8 @@ export const Services = () => {
                             </p>
                         </div>
                     </div>
-                    <div className={`${styles.serviceWrapper} ${
-                                secondVisible && styles.second
-                            }`}
-                         ref={secondRef}>
-                        <img src="img/bot.png" />
+                    <div className={styles.serviceWrapper}>
+                        <img src="img/bot.png" alt='service' />
                         <div
                             className={styles.service}
                         >

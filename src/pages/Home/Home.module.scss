@@ -1,0 +1,12 @@
+.robotRiveUp {
+    padding-top: 80px;
+    border: none;
+    margin: 0 auto;
+
+    @media (max-width: 600px) {
+      width: 99vw;
+      padding-top: 30px;
+      max-height: 547px;
+      margin-bottom: 20px;
+    }
+}

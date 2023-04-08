@@ -63,10 +63,6 @@ export const Reviews = () => {
                                     <Review {...reviews[2]} />
                                     <Review {...reviews[3]} />
                                 </div>
-                                <div className={styles.element}>
-                                    <Review {...reviews[4]} />
-                                    <Review {...reviews[5]} />
-                                </div>
                             </CarouselReviews>
                         </div>
                     </div>

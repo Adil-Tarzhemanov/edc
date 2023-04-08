@@ -1,0 +1,26 @@
+.container {
+    min-height: 669px;
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 36px auto 0px;
+
+        .title {
+            position: relative;
+            margin-top: 30px;
+            width: 426px;
+            height: 121px;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 100%;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+        }
+
+        .designServices {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 73px;
+        }
+    }
+}

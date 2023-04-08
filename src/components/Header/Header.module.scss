@@ -18,15 +18,31 @@ header {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 26px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     background: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(2px);
+
+    .logoWrapper {
+        display: flex;
+        align-items: center;
+
+        .logoText {
+            font-family: Aldrich;
+            line-height: 110%;
+            font-weight: 400;
+            font-size: 18px;
+            background: linear-gradient(90deg, #03BDFA 0%, #7237BD 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 
     ul {
         list-style-type: none;
         display: flex;
         align-items: flex-start;
-        margin-right: 171px;
+        margin-right: 100px;
+        margin-left: 71px;
         
         li {
             margin-right: 60px;

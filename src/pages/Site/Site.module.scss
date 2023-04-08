@@ -1,0 +1,17 @@
+.container {
+    background: #191C26;
+
+    header {
+        background: #191C26;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 80px;
+        grid-row-gap: 60px;
+        width: 1200px;
+        margin: 0 auto; 
+    }
+}

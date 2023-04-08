@@ -1,0 +1,48 @@
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    width: 256px;
+    height: 372px;
+    background: linear-gradient(216.2deg, #7237BD 0%, #03BDFA 100%);
+    border-radius: 10px;
+
+    .head {
+        margin-top: 35px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 120%;
+        color: white;
+        text-align: center;
+    }
+
+    .text {
+        width: 200px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: white;
+        text-align: center;
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        transition: 1s;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    &:hover {
+        img {
+            transform: translateY(140px);
+            opacity: 0;
+        }   
+    }
+}

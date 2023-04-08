@@ -15,6 +15,14 @@ export const BurgerMenu = ({ activeModal, setActiveModal }) => {
     return (
         <div className={styles.mobileHeader}>
             <nav className={menuActive && styles.active}>
+                <div className={styles.connectionWrapper}>
+                    <p>Связаться с нами</p>
+                    <h4>
+                        <a href="tel:(+998 (77) 071-20-37)">
+                            +998 (77) 071-20-37
+                        </a>
+                    </h4>
+                </div>
                 <div className={styles.btnWrapper}>
                     <div
                         className={styles.burgerBtn}

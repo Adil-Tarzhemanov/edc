@@ -5,6 +5,14 @@ export const Header = () => {
     return (
         <>
             <header>
+                <div className={styles.logoWrapper}>
+                    <img className={styles.logoImg}
+                         src='img/newlogo.png'
+                         alt='logo' 
+                         height={60}
+                         width={72} />
+                    <h2 className={styles.logoText}>EDEN <br /> COMPANY</h2>
+                </div>
                 <ul>
                     <li>
                         <Link to="home" smooth offset={-100} duration={500}>

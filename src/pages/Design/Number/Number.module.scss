@@ -1,0 +1,170 @@
+.container {
+    min-height: 405px;
+    margin-top: 50px;
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .content {
+            position: relative;
+            z-index: 1;
+            min-height: 405px;
+            background: linear-gradient(#191C26, #191C26) padding-box,
+              linear-gradient(#03BDFA, #7237BD) border-box;
+            border-radius: 10px;
+            border: 4px solid transparent;
+
+            .titleAndNumber {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 80px;
+
+                .titles {
+
+                    .title1 {
+                        font-family: 'Poppins-SemiBold';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 36px;
+                        line-height: 120%;
+                        letter-spacing: 0.03em;
+                        color: #FFFFFF;
+                    }
+    
+                    .title2 {
+                        font-family: 'Poppins-SemiBold';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 120%;
+                        letter-spacing: 0.03em;
+                        color: #FFFFFF;
+                    }
+                }
+
+                .number {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 21px;
+
+                    .telephoneAndCall {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 12px;
+
+                        .telephone {
+                            width: 260px;
+                            height: 70px;
+                            background: linear-gradient(#191C26, #191C26) padding-box,
+                                linear-gradient(180deg, #03BDFA, #7237BD) border-box;
+                            border-radius: 10px;
+                            border: 2px solid transparent;
+                            font-family: 'Poppins-SemiBold';
+                            font-weight: 600;
+                            font-size: 20px;
+                            text-align: left;
+                            padding-left: 26px;
+                            color: #FFFFFF;
+                            transition: 1s;
+                            position: relative;
+                            cursor: pointer;
+
+                            &:before {
+                                content: '';
+                                background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+                                position: absolute;
+                                top: -2px;
+                                left:-2px;
+                                background-size: 400%;
+                                z-index: -1;
+                                filter: blur(5px);
+                                width: calc(100% + 4px);
+                                height: calc(100% + 4px);
+                                animation: border 20s linear infinite;
+                                opacity: 0;
+                                transition: opacity .3s ease-in-out;
+                                border-radius: 10px;
+                            }
+        
+                            &:hover:before {
+                                opacity: 1;
+                            }
+
+                            &:hover {
+                                border: none;
+                            }
+                        }
+
+                        .call {
+                            width: 260px;
+                            height: 70px;
+                            background: linear-gradient(216.2deg, #7237BD 0%, #03BDFA 100%);
+                            border-radius: 10px;
+                            border: 0;
+                            font-family: 'Poppins-SemiBold';
+                            font-weight: 600;
+                            font-size: 20px;
+                            text-align: center;
+                            color: #FFFFFF;
+                            position: relative;
+                        }
+                    }
+
+                    .text {
+                        font-family: 'Poppins-SemiBold';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+
+            .whatWeDo {
+                display: flex;
+                justify-content: space-around;
+                margin: 118px 20px 38px 20px;
+
+                .checkAndWeDo {
+                    display: flex;
+                    align-items: center;
+                    width: 333px;
+                    height: 79.8px;
+                    gap: 11px;
+
+                    .check {
+                        flex-shrink: 1;
+                        width: 40px;
+                        height: 30px;
+                    }
+
+                    .weDo {
+                        width: 282px;
+                        font-family: 'Poppins-SemiBold';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 120%;
+                        letter-spacing: 0.03em;
+                        color: #FFFFFF;
+                    }
+
+                    .second {
+                        align-self: flex-end;
+                    }
+
+                    .third {
+                        width: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes border {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

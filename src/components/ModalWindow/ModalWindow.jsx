@@ -17,7 +17,7 @@ export const ModalWindow = ({ activeModal, setActiveModal }) => {
                     <input placeholder="имя" />
                     <input placeholder="почта" />
                     <textarea placeholder="сообщение" />
-                    <button className={styles.send}>Отправить</button>
+                    <button className={styles.send} onClick={setActiveModal(false)}>Отправить</button>
                     <div className={styles.imgWrapper}>
                         <a href='https://t.me/edencompanytech' target='_blank'>
                             <TelegramIcon className={styles.socialMedia} />
