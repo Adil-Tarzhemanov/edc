@@ -28,6 +28,10 @@ header {
         align-items: center;
         gap: 5px;
 
+        .logoImg {
+            cursor: pointer;
+        }
+
         .logoText {
             font-family: Aldrich;
             line-height: 110%;
@@ -36,17 +40,18 @@ header {
             background: linear-gradient(90deg, #03BDFA 0%, #7237BD 100%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            cursor: pointer;
         }
     }
 
-    ul {
+    & .navList {
         list-style-type: none;
         display: flex;
         align-items: flex-start;
         margin-right: 100px;
         margin-left: 71px;
         
-        li {
+        & .navItem {
             margin-right: 60px;
             font-weight: 700;
             font-size: 16px;
@@ -101,4 +106,87 @@ header {
             }
         }
     }
+
+    // & .dropdownWrapper {
+    //     position: absolute;
+    //     border: 1px solid blue;
+    //     min-height: 40px;
+    //     right: 145px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+            margin-left: 110px;
+        }
+
+        & .rotationR {
+            animation: rotationR 0.7s;
+        }
+
+        & .rotationL {
+            animation: rotationL 0.7s;
+        }
+
+        & .dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+    
+            & .languages {
+                background-color: transparent;
+                border: none;
+                color: white;
+                font-family: 'Poppins';
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 120%;
+                cursor: pointer;
+            }
+
+            & .triangle {
+                position: absolute;
+                top: 23px;
+                width: 0;
+                height: 0;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-bottom: 5px solid #03BDFA;
+            }
+    
+            & .languagesList {
+                position: absolute;
+                top: 28px;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                background: transparent;
+                padding: 0 13px 9px 13px;
+                // background: linear-gradient(216.2deg, #7237BD 0%, #03BDFA 100%);
+                // border: 1px solid linear-gradient(216.2deg, #7237BD 0%, #03BDFA 100%);
+                background: #03BDFA;
+                border-radius: 10px;
+
+                & .languageItem {
+                    color: white;
+                    font-family: 'Poppins';
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 120%;
+                    cursor: pointer;
+                    padding-top: 10px;
+                }
+            }
+        }
+    // }
+}
+
+@keyframes rotationR {
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes rotationL {
+    100% {transform: rotate(-360deg);}
 }

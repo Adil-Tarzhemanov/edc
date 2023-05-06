@@ -16,7 +16,7 @@ export const CarouselReviews = ({ children, setPages, pages, offset }) => {
                 });
             })
         );
-    }, []);
+    });
 
     return (
         <div className={styles.container}>

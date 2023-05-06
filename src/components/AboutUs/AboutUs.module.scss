@@ -13,8 +13,8 @@
         & .h2 {
             position: relative;
             margin-top: 30px;
-            width: 426px;
-            height: 121px;
+            width: 430px;
+            // height: 121px;
             font-weight: 700;
             font-size: 64px;
             line-height: 100%;
@@ -26,7 +26,7 @@
             position: relative;
             margin-top: 30px;
             width: 610px;
-            height: 96px;
+            min-height: 96px;
             font-weight: 500;
             font-size: 16px;
             line-height: 150%;
@@ -39,7 +39,7 @@
                 position: relative;
                 font-weight: 700;
                 cursor: pointer;
-                font-size: 16px;
+                font-size: 15px;
                 color: #FFFFFF;
                 margin-top: 35px;
                 width: 190.48px;
@@ -89,7 +89,7 @@
         & .h22 {
             position: relative;
             max-width: 330px;
-            height: 121px;
+            // height: 121px;
             font-weight: 700;
             font-size: 64px;
             line-height: 100%;
@@ -113,7 +113,7 @@
             align-self: center;
             font-weight: 700;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 15px;
             color: #FFFFFF;
             width: 190.48px;
             height: 52.38px;

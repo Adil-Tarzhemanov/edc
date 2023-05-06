@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { Menu } from '../Menu/Menu.jsx';
 import styles from './BurgerMenu.module.scss';
+import { useTranslation } from 'react-i18next';
 
 export const BurgerMenu = ({ activeModal, setActiveModal }) => {
     const [menuActive, setMenuActive] = useState(false);
 
+    const { t } = useTranslation();
+
     const items = [
-        { value: 'Главная', to: 'home' },
-        { value: 'Услуги', to: 'services' },
-        { value: 'О нас', to: 'aboutUs' },
+        { value: t("home"), to: 'home' },
+        { value: t("services"), to: 'services' },
+        { value: t("aboutUs"), to: 'aboutUs' },
         // { value: 'Портфолио', to: 'portfolio' },
     ];
 
@@ -16,7 +19,7 @@ export const BurgerMenu = ({ activeModal, setActiveModal }) => {
         <div className={styles.mobileHeader}>
             <nav className={menuActive ? styles.active : ''}>
                 <div className={styles.connectionWrapper}>
-                    <p>Связаться с нами</p>
+                    <p>{t("contactUs")}</p>
                     <h4>
                         <a href="tel:(+998 (77) 071-20-37)">
                             +998 (77) 071-20-37

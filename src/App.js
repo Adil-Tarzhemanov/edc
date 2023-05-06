@@ -1,7 +1,7 @@
 import styles from './App.module.scss';
-import { Design } from './pages/Design/Design';
+// import { Design } from './pages/Design/Design';
 import { Home } from './pages/Home/Home';
-import { Site } from './pages/Site/Site';
+// import { Site } from './pages/Site/Site';
 
 function App() {
     return (

@@ -24,7 +24,7 @@ export const Home = () => {
                     setActiveModal={setActiveModal}
                 />
             )}
-            <img src="img/MainRobots/HomeRobot.gif" 
+            <img id="home" src="img/MainRobots/HomeRobot.gif" 
                 className={styles.robotRiveUp} 
                 alt="robot" />
             {/* <iframe 

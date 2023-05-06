@@ -1,9 +1,11 @@
 // import { UseWindowSize } from '../hooks/UseWindowSize/UseWindowSize';
+import { useTranslation } from 'react-i18next';
 import { Section } from '../Section/Section';
 import styles from './Services.module.scss';
 
 export const Services = () => {
     // const size = UseWindowSize();
+    const { t } = useTranslation();
 
     return (
         <div className={styles.container} id="services">
@@ -11,19 +13,20 @@ export const Services = () => {
                 <div className={styles.topPart}>
                     <div className={styles.leftTopPart}>
                         <div className={styles.headAndSection}>
-                            <Section valueText="услуги" />
+                            <Section valueText={t("services")} />
                             <h2 className={styles.h2}>
-                                Продвигая <br /> технологии
+                                {t("advancing")} <br /> {t("tech")} 
                             </h2>
                         </div>
                         <div>
                             <p className={styles.headText}>
-                                &laquo;<span>Eden Company</span>&raquo; готова реализовать для вас
+                                {t("ServHeadText")}
+                                {/* &laquo;<span>Eden Company</span>&raquo; готова реализовать для вас
                                 профессиональный проект любой сложности в&nbsp;сфере
                                 IT-технологий. Трепетное отношение к&nbsp;каждому отдельному
                                 проекту, с&nbsp;использованием передовых технологии
                                 в&nbsp;области программирования и&nbsp;дизайна, позволяет
-                                нам создавать продукты высокого качества.
+                                нам создавать продукты высокого качества. */}
                             </p>
                         </div>
                     </div>
@@ -38,15 +41,11 @@ export const Services = () => {
                         <img src="img/monitor.png" alt='service' />
                         <div className={styles.service}>
                             <h3>
-                                Разработка <br /> 
-                                Веб - сайта
+                                {t("ServHead11")} <br /> 
+                                {t("ServHead12")}
                             </h3>
                             <p>
-                                Привлеките клиентов и выведите свой бизнес на
-                                новый уровень создав собственный сайт. Наша
-                                команда специалистов поможет Вам в этом и
-                                разработает для Вас современный сайт с
-                                эксклюзивным дизайном.
+                               {t("ServText1")}
                             </p>
                         </div>
                     </div>
@@ -54,14 +53,10 @@ export const Services = () => {
                         <img src="img/mobile.png" alt='service' />
                         <div
                             className={styles.service}
-                            
                         >
-                            <h3>Разработка Приложения</h3>
+                            <h3>{t("ServHead2")}</h3>
                             <p>
-                                Создание мобильного приложения будет отличным
-                                решением для интернет-магазинов, банков, служб
-                                доставки и игровых студий. Вы можете доверить
-                                нам процесс разработки и не бескоиться.
+                                {t("ServText2")}
                             </p>
                         </div>
                     </div>
@@ -70,12 +65,9 @@ export const Services = () => {
                         <div
                             className={styles.service}
                         >
-                            <h3 className={styles.design}>UI/UX Дизайн</h3>
+                            <h3 className={styles.design}>{t("ServHead3")}</h3>
                             <p>
-                                Наши веб-дизайнеры займутся разработкой
-                                уникального стиля интерфейсов, а также воплотят
-                                ваши идеи по созданию логотипа, баннеров и др.
-                                визуального контента.
+                                {t("ServText3")}
                             </p>
                         </div>
                     </div>
@@ -84,12 +76,9 @@ export const Services = () => {
                         <div
                             className={styles.service}
                         >
-                            <h3>Разработка Теглаграмм Бота</h3>
+                            <h3>{t("ServHead4")}</h3>
                             <p>
-                                Телеграмм - является одним из самых популярных
-                                мессенджеров. Создание бота для данного
-                                приложения открывает огромное пространство
-                                возможностей для Вашего бизнеса или блога.
+                                {t("ServText4")}
                             </p>
                         </div>
                     </div>

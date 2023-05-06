@@ -81,6 +81,57 @@
             display: flex;
             gap: 19px;
             margin-right: 19px;
+
+            & .review {
+                width: 564.76px;
+                height: 359.05px;
+                background: linear-gradient(216.2deg, #7237BD 0%, #03BDFA 100%);
+                border-radius: 40px;
+            
+                & .clientWrapper {
+                    display: flex;
+                    align-items: center;
+                    padding-top: 45.71px;
+            
+                    & .clientPhoto {
+                        padding-left: 48.57px;
+                        z-index: 1;
+                    }
+                    
+                    & .clientName {
+                        margin-left: 26.67px;
+            
+                        h3 {
+                            color: #FFFFFF;
+                        }
+            
+                        h4 {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            
+                & .starWrapper {
+                    display: flex;
+                    padding-left: 48.57px;
+            
+                    img {
+                        margin-right: 6px;
+                    }
+                }
+               
+            
+                & .text {
+                    margin-top: 32.38px;
+                    padding-left: 48.57px;
+                    width: 469.52px;
+                    height: 104.76px;
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 160%;
+                    color: #FFFFFF;
+                }
+            }
          }
     }
 

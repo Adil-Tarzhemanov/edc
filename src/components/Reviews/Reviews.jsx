@@ -1,10 +1,11 @@
 import { CarouselReviews } from '../CarouselReviews/CarouselReviews';
-import { Review } from '../Review/Review';
+// import { Review } from '../Review/Review';
 import { Section } from '../Section/Section';
 import { useState } from 'react';
 import styles from './Reviews.module.scss';
-import { reviews } from './data/reviews/reviews';
+// import { reviews } from './data/reviews/reviews';
 import { UseWindowSize } from '../hooks/UseWindowSize/UseWindowSize';
+import { useTranslation } from 'react-i18next';
 
 export const Reviews = () => {
 
@@ -29,6 +30,8 @@ export const Reviews = () => {
         });
     };
 
+    const { t } = useTranslation();
+
     return (
         size.width > 1210 && (
             <div className={styles.container}>
@@ -36,11 +39,10 @@ export const Reviews = () => {
                     <img src="img/circle.png" className={styles.circle} alt='circle' />
                 </div>
                 <div className={styles.wrapper}>
-                    <Section valueText="отзывы" />
-                    <h2>Что говорят наши клиенты</h2>
+                    <Section valueText={t("reviews")} />
+                    <h2>{t("reviewsHeadText")}</h2>
                     <p>
-                        Нам крайне приятно получать обратную связь от наших
-                        клиентов, вот что <br /> они говорят о нас.
+                        {t("reviewsText1")} <br /> {t("reviewsText2")}
                     </p>
                     <img
                         src="img/reviewLeftArrow.png"
@@ -56,12 +58,96 @@ export const Reviews = () => {
                                 setPages={setPages}
                             >
                                 <div className={styles.element}>
-                                    <Review {...reviews[0]} />
-                                    <Review {...reviews[1]} />
+                                    <div className={styles.review}>
+                                        <div className={styles.clientWrapper}>
+                                            <img src={'img/rewiews/ekaterina.png'} 
+                                                className={styles.clientPhoto}
+                                                alt='client' />
+                                            <div className={styles.clientName}>
+                                                <h3>{t("reviewHead1")}</h3>
+                                                <h4>{t("reviewHeadText1")}</h4>
+                                            </div>
+                                        </div>
+                                        <p className={styles.text}>
+                                            {t("reviewText1")}
+                                        </p>
+                                        <div className={styles.starWrapper}>
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                        </div>
+                                    </div>
+                                    <div className={styles.review}>
+                                        <div className={styles.clientWrapper}>
+                                            <img src={'img/rewiews/baha.png'} 
+                                                className={styles.clientPhoto}
+                                                alt='client' />
+                                            <div className={styles.clientName}>
+                                                <h3>{t("reviewHead2")}</h3>
+                                                <h4>{t("reviewHeadText2")}</h4>
+                                            </div>
+                                        </div>
+                                        <p className={styles.text}>
+                                            {t("reviewText2")}
+                                        </p>
+                                        <div className={styles.starWrapper}>
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                        </div>
+                                    </div>
+                                    {/* <Review {...reviews[0]} />
+                                    <Review {...reviews[1]} /> */}
                                 </div>
                                 <div className={styles.element}>
-                                    <Review {...reviews[2]} />
-                                    <Review {...reviews[3]} />
+                                    <div className={styles.review}>
+                                        <div className={styles.clientWrapper}>
+                                            <img src={'img/rewiews/abdulla.png'} 
+                                                className={styles.clientPhoto}
+                                                alt='client' />
+                                            <div className={styles.clientName}>
+                                                <h3>{t("reviewHead3")}</h3>
+                                                <h4>{t("reviewHeadText3")}</h4>
+                                            </div>
+                                        </div>
+                                        <p className={styles.text}>
+                                            {t("reviewText3")}
+                                        </p>
+                                        <div className={styles.starWrapper}>
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                        </div>
+                                    </div>
+                                    <div className={styles.review}>
+                                        <div className={styles.clientWrapper}>
+                                            <img src={'img/rewiews/sergey.png'} 
+                                                className={styles.clientPhoto}
+                                                alt='client' />
+                                            <div className={styles.clientName}>
+                                                <h3>{t("reviewHead4")}</h3>
+                                                <h4>{t("reviewHeadText4")}</h4>
+                                            </div>
+                                        </div>
+                                        <p className={styles.text}>
+                                            {t("reviewText4")}
+                                        </p>
+                                        <div className={styles.starWrapper}>
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                            <img src="img/Star.png" alt='star' />
+                                        </div>
+                                    </div>
+                                    {/* <Review {...reviews[2]} />
+                                    <Review {...reviews[3]} /> */}
                                 </div>
                             </CarouselReviews>
                         </div>

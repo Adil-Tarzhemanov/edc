@@ -5,14 +5,16 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { useTranslation } from 'react-i18next';
 
 export const Footer = ({ setActiveModal }) => {
     const size = UseWindowSize();
+    const { t } = useTranslation();
 
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-                <h2 onClick={() => setActiveModal(true)}>Начать проект</h2>
+                <h2 onClick={() => setActiveModal(true)}>{t("startProject")}</h2>
                 {size.width > 1300 ? (
                     <div className={styles.circleWrapper}>
                         <img

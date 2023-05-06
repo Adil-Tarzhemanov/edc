@@ -1,35 +1,70 @@
 import { Link } from 'react-scroll';
 import styles from './Header.module.scss';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 export const Header = () => {
+    const [isLanguages, setIsLanguages] = useState(false);
+    const [language, setLanguage] = useState("EN");
+
+    const dropdownRef = useRef(null);
+
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (language, l) => {
+        i18n.changeLanguage(language);
+        setLanguage(l);
+        setIsLanguages(false);
+    }
+
+    useEffect(() => {
+        const handleClick = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsLanguages(false);
+            }
+        };
+      
+        document.addEventListener("click", handleClick);
+      
+        return () => {
+            document.removeEventListener("click", handleClick);
+        };
+    }, [dropdownRef]);
+
     return (
         <>
             <header>
                 <div className={styles.logoWrapper}>
-                    <img className={styles.logoImg}
-                         src='img/newlogo.png'
-                         alt='logo' 
-                         height={60}
-                         width={72} />
-                    <h2 className={styles.logoText}>EDEN <br /> COMPANY</h2>
+                    <Link to='home' smooth offset={-100} duration={500}>
+                        <img className={styles.logoImg}
+                            src='img/newlogo.png'
+                            alt='logo' 
+                            height={60}
+                            width={72} />
+                    </Link>
+                    <Link to='home' smooth offset={-100} duration={500}>
+                        <h2 className={styles.logoText}>EDEN <br /> COMPANY</h2>
+                    </Link>
                 </div>
-                <ul>
-                    <li>
+                <ul className={styles.navList}>
+                    <li className={styles.navItem}>
                         <Link to="home" smooth offset={-100} duration={500}>
-                            Главная
+                            {t("home")}
                         </Link>
                     </li>
-                    <li>
+                    <li className={styles.navItem}>
                         <Link to="services" smooth offset={-100} duration={500}>
-                            Услуги
+                            {t("services")}
                         </Link>
                     </li>
-                    <li>
+                    <li className={styles.navItem}>
                         <Link to="aboutUs" smooth offset={-100} duration={500}>
-                            О нас
+                            {t("aboutUs")}
                         </Link>
                     </li>
-                    {/* <li>
+                    {/* <li className={styles.navItem}>
                         <Link
                             to="portfolio"
                             smooth
@@ -41,13 +76,31 @@ export const Header = () => {
                     </li> */}
                 </ul>
                 <div className={styles.connectionWrapper}>
-                    <p>Связаться с нами</p>
+                    <p>{t("contactUs")}</p>
                     <h4>
                         <a href="tel:(+998 (77) 071-20-37)">
                             +998 (77) 071-20-37
                         </a>
                     </h4>
                 </div>
+                {/* <div className={styles.dropdownWrapper}> */}
+                     <svg className={isLanguages ? styles.rotationR : styles.rotationL} 
+                     focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LanguageIcon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"></path></svg>
+
+                    <div className={styles.dropdown} ref={dropdownRef}>
+                        <button className={styles.languages} 
+                                onClick={() => setIsLanguages((prev) => !prev)}>{language}</button>
+                        {isLanguages && <div className={styles.triangle}></div>}
+                        {isLanguages && <ul className={styles.languagesList}>
+                            {language !== "RU" && <li className={styles.languageItem} 
+                                onClick={() => changeLanguage('ru', 'RU')}>RU</li>}
+                            {language !== "TR" && <li className={styles.languageItem} 
+                                onClick={() => changeLanguage('tu', 'TR')}>TR</li>}
+                            {language !== "EN" && <li className={styles.languageItem} 
+                                onClick={() => changeLanguage('en', 'EN')}>EN</li>}
+                        </ul>}
+                    </div>
+                {/* </div> */}
             </header>
         </>
     );

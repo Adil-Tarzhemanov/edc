@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import styles from './Quality.module.scss';
 
 export const Quality = () => {
+    const { t } = useTranslation();
+
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
@@ -8,11 +11,11 @@ export const Quality = () => {
                     <div
                         className={styles.rangeWrapper}>
                         <div className={styles.range}>
-                            <p>более</p>
+                            <p>{t("more")}</p>
                             <h2>2</h2>
                         </div>
                         <p>
-                            лет <br /> в бизнесе
+                            {t("qualityCircleText11")} <br /> {t("qualityCircleText12")}
                         </p>
                     </div>
                     <div
@@ -21,27 +24,27 @@ export const Quality = () => {
                             <h2 className={styles.percent}>100%</h2>
                         </div>
                         <p>
-                            гарантия <br /> на услуги
+                            {t("qualityCircleText21")} <br /> {t("qualityCircleText22")}
                         </p>
                     </div>
                     <div
                         className={styles.rangeWrapper}>
                         <div className={styles.range}> 
-                            <p>более</p>
+                            <p>{t("more")}</p>
                             <h2>10</h2>
                         </div>
                         <p>
-                            компетентных <br /> специалистов
+                            {t( "qualityCircleText31")} <br /> {t( "qualityCircleText32")}
                         </p>
                     </div>
                     <div
                         className={styles.rangeWrapper}>
                         <div className={styles.range}>
-                            <p>более</p>
+                            <p>{t("more")}</p>
                             <h2>20</h2>
                         </div>
                         <p>
-                            успешных <br /> проектов
+                        {t( "qualityCircleText41")} <br /> {t( "qualityCircleText42")}
                         </p>
                     </div>
                 </div>
@@ -50,34 +53,32 @@ export const Quality = () => {
                         <img src="img/money.png" alt="quality" />
                         <div className={styles.title}>
                             <h3>
-                                Доступные <br /> цены
+                                {t("qualityHeadText1")}
                             </h3>
                         </div>
                         <p>
-                            Отличные цены на услуги доступные даже
-                            начинающим предпринимателям.
+                            {t("qualityText1")}
                         </p>
                     </div>
                     <div className={styles.quality}>
                         <img src="img/seo.png" alt="quality" />
                         <div className={styles.title}>
-                            <h3>SEO - оптимизация</h3>
+                            <h3>{t("qualityHeadText2")}</h3>
                         </div>
                         <p>
-                            Правильная оптимизация сайта для увеличения
-                            положительной индексации поисковыми системами.
+                            {t("qualityText2")}
                         </p>
                     </div>
                     <div className={styles.quality}>
                         <img src="img/support.png" alt="quality" />
                         <div className={styles.title}>
                             <h3>
-                                Поддержка <br /> 24/7
+                                {/* Поддержка <br /> 24/7 */}
+                                {t("qualityHeadText3")}
                             </h3>
                         </div>
                         <p>
-                            Техническая поддержка и&nbsp;доработки сайтов
-                            любой сложности, аудит и&nbsp;аналитика.
+                            {t("qualityText3")}
                         </p>
                     </div>
                 </div>
