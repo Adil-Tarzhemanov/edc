@@ -17,12 +17,31 @@ export const ModalWindow = ({ setActiveModal }) => {
                          alt='close' 
                          onClick={() => setActiveModal(false)} />
                 </div>
-                <h2>{t("writeUs")}</h2>
+                <h2>{t("modalTitle")}</h2>
                 <div className={styles.basicWrapper}> 
-                    <input placeholder={t("name")} />
+                    <form className={styles.numberWrap}
+                          action="https://formspree.io/f/mbjvlelp"
+                          method="POST"
+                        >
+                        {/* <label>
+                            <input placeholder={t("name")} id='name' type='name'/>
+                        </label> */}
+                        <label>
+                            <input placeholder={t("phone")} id="message" name="message" />
+                        </label>
+                        {/* <label>
+                            <textarea placeholder={t("message")} id="message" name="message" />
+                        </label>     */}
+                        <div className={styles.connection} type="submit">
+                            <button className={styles.send} >{t("send")}</button>
+                        </div>
+                        {/* был онклик но из-за него не работал formspree 
+                        onClick={() => setActiveModal(false)} */}
+                    </form>
+                    {/* <input placeholder={t("name")} />
                     <input placeholder={t("mail")} />
                     <textarea placeholder={t("message")} />
-                    <button className={styles.send} onClick={() => setActiveModal(false)}>{t("send")}</button>
+                    <button className={styles.send} onClick={() => setActiveModal(false)}>{t("send")}</button> */}
                     <div className={styles.imgWrapper}>
                         <a href='https://t.me/edencompanytech'
                            target='_blank'

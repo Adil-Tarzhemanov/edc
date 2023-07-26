@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 export const Header = () => {
     const [isLanguages, setIsLanguages] = useState(false);
-    const [language, setLanguage] = useState("EN");
+    const [language, setLanguage] = useState("TR");
 
     const dropdownRef = useRef(null);
 
@@ -78,8 +78,8 @@ export const Header = () => {
                 <div className={styles.connectionWrapper}>
                     <p>{t("contactUs")}</p>
                     <h4>
-                        <a href="tel:(+998 (77) 071-20-37)">
-                            +998 (77) 071-20-37
+                        <a href="tel:(+90 501 081 68 77)">
+                            +90 501 081 68 77
                         </a>
                     </h4>
                 </div>

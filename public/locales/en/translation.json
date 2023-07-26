@@ -56,5 +56,7 @@
     "writeUs": "Write to us",
     "name": "name",
     "mail": "mail",
+    "phone": "Enter your number",
+    "modalTitle": "Order a call",
     "message": "message"
 }

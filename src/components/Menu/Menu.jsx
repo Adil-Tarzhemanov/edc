@@ -21,7 +21,7 @@ export const Menu = ({
     };
 
     const [isLanguages, setIsLanguages] = useState(false);
-    const [language, setLanguage] = useState("EN");
+    const [language, setLanguage] = useState("TR");
 
     const dropdownRef = useRef(null);
 

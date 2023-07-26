@@ -1,5 +1,5 @@
 {
-    "home": "EV",
+    "home": "ANASAYFA",
     "services": "HIZMETLER",
     "aboutUs": "HAKKIMIZDA",
     "portfolio": "PORTFÖY",
@@ -12,9 +12,9 @@
     "ServHead12": "geliştirme",
     "ServText1": "Kendi web sitenizi oluşturarak müşterileri çekin ve işletmenizi bir sonraki seviyeye taşıyın. Uzman ekibimiz bu konuda size yardımcı olacak ve size özel tasarımlı modern bir web sitesi geliştirecektir.",
     "ServHead2": "Uygulama geliştirme",
-    "ServText2": "Bir mobil uygulama oluşturmak, çevrimiçi mağazalar, bankalar, teslimat hizmetleri ve oyun stüdyoları için mükemmel bir çözüm olacaktır. Geliştirme sürecinde bize güvenebilir ve endişelenmeyebilirsiniz.",
+    "ServText2": "Bir mobil uygulama oluşturmak, çevrimiçi mağazalar, bankalar, teslimat hizmetleri ve oyun stüdyoları için mükemmel bir çözüm olacaktır. Geliştirme sürecinde bize tamamen güvenebilirsiniz.",
     "ServHead3": "Web tasarımı",
-    "ServText3": "Web tasarımcılarımız, benzersiz bir arayüz stili geliştirecek ve aynı zamanda bir logo, afişler ve diğer görsel içerik oluşturmak için fikirlerinizi uygulayacaktır.",
+    "ServText3": "Web tasarımcılarımız, benzersiz bir arayüz stili geliştirmenin yanı sıra, logo, afiş ve diğer tüm görsel içerikleri oluşturmak için fikirlerinizi somutlaştıracaktır.",
     "ServHead4": "Telegram Bot Geliştirme",
     "ServText4": "Telegram, en popüler anlık mesajlaşma programlarından biridir. Bu uygulama için bir bot oluşturmak, işletmeniz veya blogunuz için çok büyük bir fırsat alanı açar.",
     "DreamCompany": "Rüya şirketi",
@@ -31,7 +31,7 @@
     "qualityHeadText1": "Uygun fiyatlar",
     "qualityHeadText2": "SEO - optimizasyon",
     "qualityHeadText3": "7/24 destek",
-    "qualityText1": "Acemi girişimciler için bile mevcut olan hizmetler için mükemmel fiyatlar.",
+    "qualityText1": "Yeni başlayan girişimciler için bile erişilebilir hizmetler ve harika fiyatlar.",
     "qualityText2": "Arama motorları tarafından pozitif indekslemeyi artırmak için uygun web sitesi optimizasyonu.",
     "qualityText3": "Herhangi bir karmaşıklık, denetim ve analize sahip sitelerde teknik destek ve iyileştirmeler.",
     "lastProjects": "En son projelerimiz",
@@ -56,5 +56,7 @@
     "writeUs": "Bize yazın",
     "name": "isim",
     "mail": "posta",
+    "phone": "Numaranızı girin",
+    "modalTitle": "Arama iste",
     "message": "İleti"
 }

@@ -9,6 +9,7 @@ import { Quality } from "../../components/Quality/Quality";
 import { Services } from "../../components/Services/Services";
 import styles from './Home.module.scss';
 import { Reviews } from "../../components/Reviews/Reviews";
+import { t } from "i18next";
 
 export const Home = () => {
     const [activeModal, setActiveModal] = useState(false);
@@ -27,6 +28,10 @@ export const Home = () => {
             <img id="home" src="img/MainRobots/HomeRobot.gif" 
                 className={styles.robotRiveUp} 
                 alt="robot" />
+            {size.width < 1100 && <button className={styles.callBtn} onClick={() => setActiveModal(true)}>
+                <img alt="call" className={styles.callImg} src="img/utils/call.png"/>
+                <p className={styles.btnText}>{t("modalTitle")}</p>
+            </button>}
             {/* <iframe 
                 id='home'
                 className={styles.robotRiveUp} 
