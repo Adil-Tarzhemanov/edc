@@ -48,7 +48,7 @@ export const ModalWindow = ({ setActiveModal }) => {
                            rel='noreferrer'>
                             <TelegramIcon className={styles.socialMedia} />
                         </a>
-                        <a href='https://wa.me/+905056328364'
+                        <a href='https://wa.me/+905010816877'
                            target='_blank'
                            rel='noreferrer'>
                             <WhatsAppIcon className={styles.socialMedia} />

@@ -93,7 +93,7 @@ export const Footer = ({ setActiveModal }) => {
                     </div>
                 )}
                 <div className={styles.textWrapper}>
-                    <h3>© 2022 Eden Company, All Rights Reserved.</h3>
+                    <h3>© 2023 Eden Company, All Rights Reserved.</h3>
                     <div className={styles.imgWrapper}>
                         <a href='https://instagram.com/edencompanytech?igshid=YmMyMTA2M2Y='
                            target='_blank'>

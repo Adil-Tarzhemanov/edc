@@ -21,8 +21,8 @@ export const BurgerMenu = ({ activeModal, setActiveModal }) => {
                 <div className={styles.connectionWrapper}>
                     <p>{t("contactUs")}</p>
                     <h4>
-                        <a href="tel:(+998 (77) 071-20-37)">
-                            +998 (77) 071-20-37
+                        <a href="tel:(+90 501 081 68 77)">
+                            +90 501 081 68 77
                         </a>
                     </h4>
                 </div>
